@@ -23,8 +23,16 @@ int solution(int a[], int n) {
 }
 
 int main(int argc, char **argv) {
-  int a[6] = {23171, 21011, 21123, 21366, 21013, 21367};
-  printf("Solution: %d\n", solution(a, 6));
-
+	if (argc == 1) {
+		int a[6] = {23171, 21011, 21123, 21366, 21013, 21367};
+		printf("Solution: %d\n", solution(a, 6));
+	} else {
+		int n = argc - 1;
+		int a[n];
+		for (int i = 1; i < argc; i++) {
+			a[i-1] = atoi(argv[i]);
+		}
+		printf("Solution: %d\n", solution(a, n));
+	}
   return 0;
 }
