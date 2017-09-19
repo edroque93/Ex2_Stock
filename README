@@ -1,0 +1,5 @@
+Exercise 2
+
+Function implemented to fulfill the exercise. Uses constant space, O(1), and process the input depending on its size, O(N).
+
+The program can be executed with or without arguments. If executed without arguments, it will use the example given. If executed with arguments it will treat each item as a number and perform the function on these numbers.
