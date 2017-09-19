@@ -10,16 +10,16 @@
 
 int solution(int a[], int n) {
   // SC O(1)
-  int min_buy = INT_MAX;
-  int current_profit = INT_MIN;
-  int best_profit = 0;
+  int minBuy = INT_MAX;
+  int currentProfit = INT_MIN;
+  int bestProfit = 0;
   // TC O(N)
   for (int i = 0; i < n; i++) {
-    current_profit = MAX(0, a[i] - min_buy);
-    min_buy = MIN(a[i], min_buy);
-    best_profit = MAX(current_profit, best_profit);
+    currentProfit = MAX(0, a[i] - minBuy);
+    minBuy = MIN(a[i], minBuy);
+    bestProfit = MAX(currentProfit, bestProfit);
   }
-  return best_profit;
+  return bestProfit;
 }
 
 int main(int argc, char **argv) {
